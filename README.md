@@ -1,14 +1,14 @@
-<p align="center"><img src="Resources/Icon@2x.png" width="96" alt="Spotify6 icon"></p>
+<p align="center"><img src="Resources/Icon@2x.png" width="96" alt="JaskoSpotify icon"></p>
 
-<h1 align="center">Spotify6</h1>
+<h1 align="center">JaskoSpotify</h1>
 
 <p align="center"><b>Spotify, back on iOS 5 and 6.</b><br>A native standalone Spotify client for jailbroken iOS 5 and 6, on iPhone, iPod touch and iPad.</p>
 
 ---
 
-Spotify6 puts your whole Spotify account on iOS 5 and 6: your playlists, your queue and your offline music. It runs entirely on the phone and works with your existing account.
+JaskoSpotify puts your whole Spotify account on iOS 5 and 6: your playlists, your queue and your offline music. It runs entirely on the phone and works with your existing account.
 
-Spotify6 is based on [riff](https://github.com/SecondTrack/riff) by Second Track, which provides the Spotify connection and audio playback underneath. Big thanks to them for making it open source.
+JaskoSpotify is based on [riff](https://github.com/SecondTrack/riff) by Second Track, which provides the Spotify connection and audio playback underneath. Big thanks to them for making it open source.
 
 <table align="center">
   <tr>
@@ -27,7 +27,7 @@ Spotify6 is based on [riff](https://github.com/SecondTrack/riff) by Second Track
 
 ### On iPad
 
-Spotify6 is a universal app. On the iPad it has its own layout with a sidebar, a player bar along the bottom and a full-screen player, and it works in both portrait and landscape.
+JaskoSpotify is a universal app. On the iPad it has its own layout with a sidebar, a player bar along the bottom and a full-screen player, and it works in both portrait and landscape.
 
 <table align="center">
   <tr>
@@ -64,7 +64,7 @@ Spotify6 is a universal app. On the iPad it has its own layout with a sidebar, a
 </table>
 
 > [!IMPORTANT]
-> Spotify6 is an unofficial project and is **not affiliated with Spotify**. It talks to Spotify through undocumented interfaces using your own account, which may be against Spotify's Terms of Use and could stop working at any time. **Spotify Premium is required.** Use it at your own risk.
+> JaskoSpotify is an unofficial project and is **not affiliated with Spotify**. It talks to Spotify through undocumented interfaces using your own account, which may be against Spotify's Terms of Use and could stop working at any time. **Spotify Premium is required.** Use it at your own risk.
 
 ## Features
 
@@ -92,13 +92,13 @@ Spotify6 is a universal app. On the iPad it has its own layout with a sidebar, a
 | | |
 |---|---|
 | Device | An armv7 iPhone, iPod touch or iPad on **iOS 5 or 6**, jailbroken, including 4-inch models (iPhone 5, iPod touch 5). Tested on an iPhone 3GS (iOS 6), and on an iPad 1 and an iPod touch 3G (iOS 5.1.1) in an emulator. |
-| Installer | **AppSync** (Spotify6 installs as a normal app) |
+| Installer | **AppSync** (JaskoSpotify installs as a normal app) |
 | Account | **Spotify Premium** |
 | Search | Your own free Spotify developer key (the app shows you how to create one in about three minutes) |
 
 ## Signing in
 
-Spotify6 **NEVER** asks for your password. On first launch it shows a short code. Enter it at **spotify.com/pair** on any other device and you are in. The login is stored only on the phone, inside the app's own folder, and renews itself.
+JaskoSpotify **NEVER** asks for your password. On first launch it shows a short code. Enter it at **spotify.com/pair** on any other device and you are in. The login is stored only on the phone, inside the app's own folder, and renews itself.
 
 ## Building
 
@@ -115,7 +115,7 @@ scripts/install.sh
 
 A plain `gmake package` builds a debug version with an extra test hook (`music/App/MMDebug.m`) for driving the app over SSH; release builds leave it out.
 
-**Notification Center widget** (optional, `widget/`): build it with `gmake package FINALPACKAGE=1` inside `widget/`, install the `.deb` on the device with `dpkg -i`, respring, and turn it on in iOS Settings → Notifications. It can be switched off any time in Spotify6's settings. iPads on iOS 5 can't show Notification Center widgets.
+**Notification Center widget** (optional, `widget/`): build it with `gmake package FINALPACKAGE=1` inside `widget/`, install the `.deb` on the device with `dpkg -i`, respring, and turn it on in iOS Settings → Notifications. It can be switched off any time in JaskoSpotify's settings. iPads on iOS 5 can't show Notification Center widgets.
 
 ### Checking playlist features
 
@@ -124,15 +124,15 @@ including multi-page queues, library membership, account write failures and offl
 
 ## How it works
 
-Spotify6 signs in to a Spotify access point the way Spotify's own clients do and keeps that connection open for metadata and the keys that unlock each song. Your library comes from the same internal servers the official apps use; only search goes through the public Web API, with your own developer key.
+JaskoSpotify signs in to a Spotify access point the way Spotify's own clients do and keeps that connection open for metadata and the keys that unlock each song. Your library comes from the same internal servers the official apps use; only search goes through the public Web API, with your own developer key.
 
-Songs are fetched from Spotify's CDN in their encrypted form, decrypted on the phone and decoded from Ogg Vorbis in software. Spotify6 uses the 160 kbps version, which keeps decoding at roughly 7–9 % of the 3GS's CPU. Because iOS 5 and 6 can no longer talk to some of Spotify's servers securely, all HTTPS traffic runs through a bundled Mbed TLS with full certificate checks.
+Songs are fetched from Spotify's CDN in their encrypted form, decrypted on the phone and decoded from Ogg Vorbis in software. JaskoSpotify uses the 160 kbps version, which keeps decoding at roughly 7–9 % of the 3GS's CPU. Because iOS 5 and 6 can no longer talk to some of Spotify's servers securely, all HTTPS traffic runs through a bundled Mbed TLS with full certificate checks.
 
 The widget is a small plugin inside SpringBoard that reads what's currently playing from the system and sends the same commands as the lock screen.
 
 ## Credits
 
-Spotify6 began as a fork of **[riff](https://github.com/SecondTrack/riff) by Second Track**, which made Spotify playback on iOS 6 possible in the first place: the protocol work, the audio pipeline and the first version of the app. Thank you!
+JaskoSpotify began as a fork of **[riff](https://github.com/SecondTrack/riff) by Second Track**, which made Spotify playback on iOS 6 possible in the first place: the protocol work, the audio pipeline and the first version of the app. Thank you!
 
 Also used:
 - [stb_vorbis](https://github.com/nothings/stb) by Sean Barrett: Ogg Vorbis decoding (public domain / MIT)
@@ -146,4 +146,4 @@ Details are in [NOTICE](NOTICE).
 
 GNU General Public License v3.0, see [LICENSE](LICENSE).
 
-Spotify is a trademark of Spotify AB. iPhone and iOS are trademarks of Apple Inc. Spotify6 is not affiliated with or endorsed by Spotify or Apple.
+Spotify is a trademark of Spotify AB. iPhone and iOS are trademarks of Apple Inc. JaskoSpotify is not affiliated with or endorsed by Spotify or Apple.
