@@ -2,6 +2,8 @@
 // Portiert aus den bewiesenen Mac-Tools. Läuft im Hintergrund, meldet Ergebnis auf dem Main-Thread.
 #import <Foundation/Foundation.h>
 
+#define MM_LIKED_DOWNLOAD_MIN_FREE_BYTES (256LL * 1024 * 1024)
+
 // Alle Daten (Login, Tokens, Downloads, Cache) liegen im App-Container unter Library/Riff:
 // Spotify6 ist eine Nutzer-App (IPA) in der Sandbox, /var/mobile ist dort nicht beschreibbar.
 NSString *MMDataDir(void);              // <Container>/Library/Riff (wird angelegt)
@@ -20,6 +22,7 @@ void MMLog(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2);   // ins App-Log (Librar
 // Kommt das Netz zurück, verbindet sich die Wiedergabe-Session von selbst neu.
 + (BOOL)networkReachable;
 + (BOOL)wifiReachable;
++ (void)resumeQueuedDownloads;
 + (void)startNetworkWatch;
 // Auto-Login mit gespeicherten Zugangsdaten (kein Passwort/Browser nötig).
 + (void)loginStoredWithCompletion:(void(^)(BOOL ok, NSString *username, NSString *error))done;
@@ -28,15 +31,19 @@ void MMLog(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2);   // ins App-Log (Librar
 // Lädt + entschlüsselt den ganzen Track und spielt ihn ab (MMAudio).
 + (void)playTrack:(NSString *)trackId completion:(void(^)(BOOL ok, NSString *error))done;
 + (void)playTrack:(NSString *)trackId stream:(BOOL)stream completion:(void(^)(BOOL ok, NSString *error))done;   // stream=NO: erst ganz laden
++ (void)playEpisode:(NSString *)episodeId stream:(BOOL)stream completion:(void(^)(BOOL ok, NSString *error))done;
 // Lädt + entschlüsselt den nächsten Track im Hintergrund in den Cache (für nahtlosen Übergang).
 + (void)prefetchTrack:(NSString *)trackId;
 // --- Offline: Playlists herunterladen ---
 + (BOOL)isDownloaded:(NSString *)trackId;
++ (BOOL)isDownloaded:(NSString *)mediaId mediaType:(NSString *)mediaType;
 + (BOOL)playableOffline:(NSString *)trackId;   // heruntergeladen, im Song-Cache oder im RAM -> spielt ohne Netz
++ (BOOL)playableOffline:(NSString *)mediaId mediaType:(NSString *)mediaType;
 + (BOOL)allDownloaded:(NSArray *)trackIds;   // sind alle trackIds auf der Platte?
 // Reiht Tracks in die globale Download-Warteschlange ein (mehrere Playlists nacheinander).
 // Status per Notification: MMDownloadProgress {done,total} · MMDownloadDone {ok} · MMDownloadFull
 + (void)queueDownloadTracks:(NSArray *)trackIds;
++ (void)queueDownloadEpisodes:(NSArray *)episodeIds;
 + (void)queueLikedDailyTracks:(NSArray *)trackIds;
 + (void)removeDownloads:(NSArray *)trackIds;
 // Offline-Playlists dauerhaft merken -> beim Start werden fehlende Tracks automatisch weitergeladen.
@@ -75,6 +82,8 @@ void MMLog(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2);   // ins App-Log (Librar
 + (void)apiUser:(NSString *)method path:(NSString *)path body:(NSData *)body completion:(void(^)(NSDictionary *json, NSInteger status))done;
 // Holt ALLE Seiten einer paginierten Liste (folgt "next"), liefert die rohen items (track-wrapper o. tracks).
 + (void)apiUserAllItems:(NSString *)path completion:(void(^)(NSArray *items, NSInteger status))done;
++ (void)savedShows:(void(^)(NSArray *shows, NSInteger status))done;
++ (void)latestPodcastEpisodes:(void(^)(NSArray *episodes, NSInteger status))done;
 // GET mit Disk-Cache: liefert sofort die letzten Daten (fresh=NO), dann frische (fresh=YES) - aber nur wenn sie sich geändert haben.
 // Ohne Cache und bei Fehler kommt genau ein Aufruf mit fresh=YES (json=nil).
 + (void)apiUserCached:(NSString *)path completion:(void(^)(NSDictionary *json, NSInteger status, BOOL fresh))done;
