@@ -1,149 +1,177 @@
-<p align="center"><img src="Resources/Icon@2x.png" width="96" alt="JaskoSpotify icon"></p>
+<p align="center"><img src="Resources/Icon@2x.png" width="96" alt="Ícone do JaskoSpotify"></p>
 
 <h1 align="center">JaskoSpotify</h1>
 
-<p align="center"><b>Spotify, back on iOS 5 and 6.</b><br>A native standalone Spotify client for jailbroken iOS 5 and 6, on iPhone, iPod touch and iPad.</p>
+<p align="center"><b>Spotify de volta ao iOS 5 e 6.</b><br>Cliente nativo e independente para iPhone, iPod touch e iPad com jailbreak.</p>
 
 ---
 
-JaskoSpotify puts your whole Spotify account on iOS 5 and 6: your playlists, your queue and your offline music. It runs entirely on the phone and works with your existing account.
+O JaskoSpotify traz sua conta Spotify para aparelhos com iOS 5 e 6: biblioteca, playlists, fila e músicas offline. O aplicativo roda no próprio aparelho e usa sua conta existente.
 
-JaskoSpotify is based on [riff](https://github.com/SecondTrack/riff) by Second Track, which provides the Spotify connection and audio playback underneath. Big thanks to them for making it open source.
+JaskoSpotify é baseado no [Spotify6](https://github.com/iKiWY/Spotify6), que por sua vez é baseado no [riff](https://github.com/SecondTrack/riff), de Second Track. O riff forneceu a conexão com o Spotify e a base de reprodução de áudio; o Spotify6 desenvolveu essa base em um cliente nativo para iOS 5 e 6. Agradecemos aos dois projetos e a seus colaboradores.
 
 <table align="center">
   <tr>
-    <td align="center" valign="top"><b>Home</b><br><img src="docs/screenshots/home.png" width="190" alt="Home"></td>
-    <td align="center" valign="top"><b>Now playing</b><br><img src="docs/screenshots/player.png" width="190" alt="Now playing"></td>
-    <td align="center" valign="top"><b>Queue</b><br><img src="docs/screenshots/queue.png" width="190" alt="Queue"></td>
-    <td align="center" valign="top"><b>Album</b><br><img src="docs/screenshots/album.png" width="190" alt="Album"></td>
+    <td align="center" valign="top"><b>Início</b><br><img src="docs/screenshots/home.png" width="190" alt="Início"></td>
+    <td align="center" valign="top"><b>Reprodução</b><br><img src="docs/screenshots/player.png" width="190" alt="Tela de reprodução"></td>
+    <td align="center" valign="top"><b>Fila</b><br><img src="docs/screenshots/queue.png" width="190" alt="Fila de reprodução"></td>
+    <td align="center" valign="top"><b>Álbum</b><br><img src="docs/screenshots/album.png" width="190" alt="Página de álbum"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><b>Song menu</b><br><img src="docs/screenshots/menu.png" width="190" alt="Song menu"></td>
-    <td align="center" valign="top"><b>Search</b><br><img src="docs/screenshots/search.png" width="190" alt="Search"></td>
-    <td align="center" valign="top"><b>Artist</b><br><img src="docs/screenshots/artist.png" width="190" alt="Artist"></td>
-    <td align="center" valign="top"><b>Notification Center</b><br><img src="docs/screenshots/widget.png" width="190" alt="Notification Center"></td>
+    <td align="center" valign="top"><b>Menu da faixa</b><br><img src="docs/screenshots/menu.png" width="190" alt="Menu de faixa"></td>
+    <td align="center" valign="top"><b>Busca</b><br><img src="docs/screenshots/search.png" width="190" alt="Busca"></td>
+    <td align="center" valign="top"><b>Artista</b><br><img src="docs/screenshots/artist.png" width="190" alt="Página de artista"></td>
+    <td align="center" valign="top"><b>Central de Notificações</b><br><img src="docs/screenshots/widget.png" width="190" alt="Widget da Central de Notificações"></td>
   </tr>
 </table>
 
-### On iPad
+### No iPad
 
-JaskoSpotify is a universal app. On the iPad it has its own layout with a sidebar, a player bar along the bottom and a full-screen player, and it works in both portrait and landscape.
+O app é universal. No iPad, há uma interface própria com barra lateral, controles de reprodução na parte inferior e player em tela cheia, tanto na orientação retrato quanto paisagem.
 
 <table align="center">
   <tr>
-    <td align="center" valign="top"><b>Home (portrait)</b><br><img src="docs/screenshots/ipad-home-portrait.png" width="300" alt="iPad Home, portrait"></td>
-    <td align="center" valign="top"><b>Home (landscape)</b><br><img src="docs/screenshots/ipad-home-landscape.png" width="400" alt="iPad Home, landscape"></td>
+    <td align="center" valign="top"><b>Início (retrato)</b><br><img src="docs/screenshots/ipad-home-portrait.png" width="300" alt="Início no iPad em retrato"></td>
+    <td align="center" valign="top"><b>Início (paisagem)</b><br><img src="docs/screenshots/ipad-home-landscape.png" width="400" alt="Início no iPad em paisagem"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><b>Now playing (portrait)</b><br><img src="docs/screenshots/ipad-player-portrait.png" width="300" alt="iPad Now playing, portrait"></td>
-    <td align="center" valign="top"><b>Now playing with queue (landscape)</b><br><img src="docs/screenshots/ipad-player-queue-landscape.png" width="400" alt="iPad Now playing with the queue open, landscape"></td>
+    <td align="center" valign="top"><b>Player (retrato)</b><br><img src="docs/screenshots/ipad-player-portrait.png" width="300" alt="Player no iPad em retrato"></td>
+    <td align="center" valign="top"><b>Player e fila (paisagem)</b><br><img src="docs/screenshots/ipad-player-queue-landscape.png" width="400" alt="Player e fila no iPad em paisagem"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><b>Playlist (landscape)</b><br><img src="docs/screenshots/ipad-playlist-landscape.png" width="400" alt="iPad Playlist, landscape"></td>
-    <td align="center" valign="top"><b>Album (landscape)</b><br><img src="docs/screenshots/ipad-album-landscape.png" width="400" alt="iPad Album, landscape"></td>
+    <td align="center" valign="top"><b>Playlist (paisagem)</b><br><img src="docs/screenshots/ipad-playlist-landscape.png" width="400" alt="Playlist no iPad em paisagem"></td>
+    <td align="center" valign="top"><b>Álbum (paisagem)</b><br><img src="docs/screenshots/ipad-album-landscape.png" width="400" alt="Álbum no iPad em paisagem"></td>
   </tr>
 </table>
 
-### Classic iOS skin
+### Visual clássico do iOS
+
+Escolha entre o tema escuro inspirado no Spotify e o tema Classic iOS, inspirado nos apps de sistema do iOS 6.
 
 <table align="center">
   <tr>
-    <td align="center" valign="top"><b>Home</b><br><img src="docs/screenshots/classic-ios/iphone-home.png" width="190" alt="Classic iOS skin: Home"></td>
-    <td align="center" valign="top"><b>Now playing</b><br><img src="docs/screenshots/classic-ios/iphone-player.png" width="190" alt="Classic iOS skin: Now playing"></td>
-    <td align="center" valign="top"><b>Album</b><br><img src="docs/screenshots/classic-ios/iphone-album.png" width="190" alt="Classic iOS skin: Album"></td>
+    <td align="center" valign="top"><b>Início</b><br><img src="docs/screenshots/classic-ios/iphone-home.png" width="190" alt="Tema clássico: início"></td>
+    <td align="center" valign="top"><b>Player</b><br><img src="docs/screenshots/classic-ios/iphone-player.png" width="190" alt="Tema clássico: player"></td>
+    <td align="center" valign="top"><b>Álbum</b><br><img src="docs/screenshots/classic-ios/iphone-album.png" width="190" alt="Tema clássico: álbum"></td>
   </tr>
 </table>
+
 <table align="center">
   <tr>
-    <td align="center" valign="top"><b>iPad Home</b><br><img src="docs/screenshots/classic-ios/ipad-home.png" width="400" alt="Classic iOS skin: iPad Home"></td>
-    <td align="center" valign="top"><b>iPad Playlist</b><br><img src="docs/screenshots/classic-ios/ipad-playlist.png" width="400" alt="Classic iOS skin: iPad Playlist"></td>
+    <td align="center" valign="top"><b>Início no iPad</b><br><img src="docs/screenshots/classic-ios/ipad-home.png" width="400" alt="Tema clássico: início no iPad"></td>
+    <td align="center" valign="top"><b>Playlist no iPad</b><br><img src="docs/screenshots/classic-ios/ipad-playlist.png" width="400" alt="Tema clássico: playlist no iPad"></td>
   </tr>
   <tr>
-    <td align="center" valign="top" colspan="2"><b>iPad Now playing</b><br><img src="docs/screenshots/classic-ios/ipad-player.png" width="400" alt="Classic iOS skin: iPad Now playing"></td>
+    <td align="center" valign="top" colspan="2"><b>Player no iPad</b><br><img src="docs/screenshots/classic-ios/ipad-player.png" width="400" alt="Tema clássico: player no iPad"></td>
   </tr>
 </table>
 
 > [!IMPORTANT]
-> JaskoSpotify is an unofficial project and is **not affiliated with Spotify**. It talks to Spotify through undocumented interfaces using your own account, which may be against Spotify's Terms of Use and could stop working at any time. **Spotify Premium is required.** Use it at your own risk.
+> JaskoSpotify é um projeto independente, sem vínculo com o Spotify. O app usa interfaces não documentadas do Spotify com a sua própria conta. Isso pode contrariar os Termos de Uso e pode deixar de funcionar se os serviços mudarem. É necessário Spotify Premium. Use por sua conta e risco.
 
-## Features
+## Recursos
 
-- **Skins (1.2.2+)**: the dark Spotify look or a Classic iOS look that matches the iOS 6 system apps, switchable in Settings
-- **iPad layout (1.2.0+)**: sidebar with your recent playlists, a player bar, a full-screen player, and both orientations
-- **Quick start (1.2.0+)**: songs start playing a few seconds after you tap them, while the rest downloads, with a green line showing how much is loaded
-- **Taller screens (1.2.0+)**: uses the full 4-inch screen of the iPhone 5 and iPod touch 5
-- **Queue** with *Next in queue* and *Next up*: drag to reorder, swipe to add or remove, repeat the queue, or stop when it runs out
-- **Song menu**: long-press any song to view the artist or album, queue it, like it, add it to a playlist or download it
-- **Home** with the playlists, albums and artists you played recently, plus recently played songs, including plays from the phone
-- **Search** for artists, songs, albums and playlists, with your recent searches
-- **Playlist controls**: play the full list in order or shuffled, save/remove it from your library, create playlists from Library or the song picker, and rename your own playlists
-- **Artist and album pages**, with an optional big-cover look for albums and playlists
-- **Offline** playlists, albums and single songs, with resumable and background downloads
-- **Song cache**: recently played songs are kept on the phone (up to 500 MB), so they play again without downloading
-- **Notification Center widget** with cover, title, "Playing from …" and playback controls
-- **Mini player** you can swipe to skip, and a full player you drag down to close
-- **Official covers** for Spotify-made playlists such as Blends and Your Top Songs
-- **Cover Flow** when you turn the phone sideways (on iPad, from the sidebar)
-- **Gapless playback**: the next song is ready before the current one ends
-- **Sign in with a code** at spotify.com/pair, no password needed
+### Biblioteca e descoberta
 
-## Requirements
+- Início com playlists, álbuns, artistas e faixas reproduzidos recentemente, inclusive pelo próprio aparelho.
+- Busca de faixas, álbuns, artistas e playlists públicas, com histórico de buscas. A busca exige uma chave própria e gratuita da API de desenvolvedor do Spotify.
+- Páginas de artista, álbum e playlist, com capas grandes opcionais.
+- Capas oficiais para playlists criadas pelo Spotify, como Blends e Your Top Songs.
+- Biblioteca com Liked Songs e playlists; crie playlists, adicione faixas, renomeie as suas e salve ou remova playlists da biblioteca.
+- Reprodução de playlists completas, mesmo quando têm mais faixas que a primeira página carregada.
 
-| | |
+### Player e fila
+
+- Início rápido: a faixa começa a tocar enquanto o restante do áudio continua carregando; uma linha verde indica o progresso.
+- Fila com “Próximas na fila” e “A seguir”: reordene por arrastar, adicione ou remova por gesto e escolha se a reprodução deve parar ao final.
+- Repetição das faixas adicionadas à fila e reprodução contínua da lista “A seguir” podem ser controladas na tela da fila.
+- Mini player com gesto para avançar; player completo que pode ser fechado arrastando para baixo.
+- Reprodução gapless, preparando a próxima faixa antes de a atual terminar.
+- Equalizador gráfico nativo de 10 bandas, com ajuste por frequência, pré-amplificação e opção de desativar ou zerar as bandas.
+- Qualidade configurável separadamente para streaming e downloads em Wi-Fi e rede móvel: 96, 160 ou 320 kbps. Downloads móveis também podem ser desligados.
+- Skin escura Spotify ou Classic iOS; layout próprio de iPad em retrato e paisagem; suporte às telas de 4 polegadas do iPhone 5 e iPod touch 5.
+- Cover Flow ao girar o iPhone; no iPad, disponível pela barra lateral.
+
+### Offline e downloads
+
+- Salve playlists, álbuns e faixas para ouvir offline. Downloads podem ser retomados e continuam em segundo plano quando essa opção está ligada.
+- A tela Downloads mostra o que está na fila e as faixas salvas; é possível pausar, retomar ou cancelar os itens restantes. Faixas já concluídas permanecem no aparelho.
+- Downloads podem aguardar uma conexão Wi-Fi quando a qualidade de download móvel está em “Off”.
+- Cache de até 500 MB para faixas reproduzidas recentemente, permitindo reproduzi-las novamente sem baixar o áudio outra vez.
+- Limpeza de todos os downloads offline e limpeza separada do cache.
+- **Experimental — salvar streams móveis em Downloads:** ao ativar a opção em Ajustes, faixas reproduzidas pela rede móvel também entram na fila de downloads, na qualidade móvel configurada para download. Isso consome dados móveis adicionais e espaço no aparelho; deixe a qualidade móvel em “Off” para não salvar automaticamente.
+- **Experimental — downloads rotativos de Liked Songs:** o app pode baixar faixas curtidas aleatórias e renovar esse conjunto diariamente, uma faixa por vez. As antigas são removidas conforme novas ficam prontas, preservando faixas baixadas manualmente e as compartilhadas com outros downloads. Configure repetição e limite diário em Ajustes; o limite pode ser ilimitado, mantendo ao menos 256 MB livres, ou definido em 256 MB, 512 MB ou 1 GB.
+
+### Integrações e conta
+
+- Widget opcional da Central de Notificações com capa, faixa, contexto (“Reproduzindo de…”) e controles. Pode ser desligado em Ajustes; widgets não são compatíveis com iPad no iOS 5.
+- Integração opcional com Last.fm para enviar reproduções qualificadas ao perfil. Reproduções feitas offline ficam na fila e são enviadas quando a conexão volta.
+- Login por código em [spotify.com/pair](https://spotify.com/pair), sem digitar sua senha do Spotify no app. A sessão fica na pasta privada do aplicativo e é renovada automaticamente.
+- Ferramenta de diagnóstico em Ajustes para ajudar a identificar problemas de conexão ou reprodução.
+
+## Requisitos
+
+| | Requisito |
 |---|---|
-| Device | An armv7 iPhone, iPod touch or iPad on **iOS 5 or 6**, jailbroken, including 4-inch models (iPhone 5, iPod touch 5). Tested on an iPhone 3GS (iOS 6), and on an iPad 1 and an iPod touch 3G (iOS 5.1.1) in an emulator. |
-| Installer | **AppSync** (JaskoSpotify installs as a normal app) |
-| Account | **Spotify Premium** |
-| Search | Your own free Spotify developer key (the app shows you how to create one in about three minutes) |
+| Aparelho | iPhone, iPod touch ou iPad ARMv7 com iOS 5 ou 6 e jailbreak, incluindo iPhone 5 e iPod touch 5. Testado em iPhone 3GS com iOS 6 e em iPad 1 e iPod touch 3G com iOS 5.1.1 em emulador. |
+| Instalação | AppSync; o JaskoSpotify é instalado como um app normal. |
+| Conta | Spotify Premium. |
+| Busca | Chave própria e gratuita de desenvolvedor do Spotify. O app orienta a criação. |
+| Last.fm | Opcional. Configure credenciais de API próprias durante o build; veja abaixo. |
 
-## Signing in
+## Primeiro acesso
 
-JaskoSpotify **NEVER** asks for your password. On first launch it shows a short code. Enter it at **spotify.com/pair** on any other device and you are in. The login is stored only on the phone, inside the app's own folder, and renews itself.
+O JaskoSpotify **nunca pede sua senha**. Ao abrir pela primeira vez, ele mostra um código curto. Digite-o em [spotify.com/pair](https://spotify.com/pair) em outro aparelho para autorizar a conta.
 
-## Building
+## Compilar
 
-Needs [Theos](https://theos.dev) with the **iPhoneOS 9.3 SDK**. The app targets iOS 5.0 (one build for iOS 5 and 6) and builds with `-Werror`.
+É necessário [Theos](https://theos.dev) e o SDK iPhoneOS 9.3. O app tem deployment target iOS 5.0 e é compilado para iOS 5 e 6 com `-Werror`.
 
 ```sh
-# TLS library: downloads the official Mbed TLS 3.6.7 release, checks its SHA-256, builds it for armv7
+# Baixa a versão oficial do Mbed TLS, valida o SHA-256 e compila para ARMv7
 vendor/mbedtls/fetch.sh
 vendor/mbedtls/build.sh
 
-# Build the release IPA and install it over USB (ideviceinstaller + AppSync)
+# Cria o IPA de release e instala via USB (ideviceinstaller + AppSync)
 scripts/install.sh
 ```
 
-A plain `gmake package` builds a debug version with an extra test hook (`music/App/MMDebug.m`) for driving the app over SSH; release builds leave it out.
+Um `gmake package` normal gera uma build de desenvolvimento com um gancho de teste adicional (`music/App/MMDebug.m`) para controle via SSH. Builds de release não incluem esse gancho.
 
-**Notification Center widget** (optional, `widget/`): build it with `gmake package FINALPACKAGE=1` inside `widget/`, install the `.deb` on the device with `dpkg -i`, respring, and turn it on in iOS Settings → Notifications. It can be switched off any time in JaskoSpotify's settings. iPads on iOS 5 can't show Notification Center widgets.
+### Last.fm
 
-### Checking playlist features
+Para habilitar o Last.fm, copie `music/Spot/MMLastFMAppConfig.h.example` para `music/Spot/MMLastFMAppConfig.local.h` e preencha sua chave e seu segredo de API do Last.fm. O arquivo local é ignorado pelo Git. Depois, compile o app e conecte sua conta pela seção Last.fm em Ajustes.
 
-See [the playlist verification checklist](docs/playlist-verification.md) for device checks,
-including multi-page queues, library membership, account write failures and offline behavior.
+### Widget da Central de Notificações
 
-## How it works
+O widget em `widget/` é opcional. Compile com `gmake package FINALPACKAGE=1` dentro da pasta, instale o `.deb` no aparelho com `dpkg -i`, faça respring e ative em Ajustes do iOS → Notificações. O próprio app também permite desativá-lo.
 
-JaskoSpotify signs in to a Spotify access point the way Spotify's own clients do and keeps that connection open for metadata and the keys that unlock each song. Your library comes from the same internal servers the official apps use; only search goes through the public Web API, with your own developer key.
+### Verificação de playlists
 
-Songs are fetched from Spotify's CDN in their encrypted form, decrypted on the phone and decoded from Ogg Vorbis in software. JaskoSpotify uses the 160 kbps version, which keeps decoding at roughly 7–9 % of the 3GS's CPU. Because iOS 5 and 6 can no longer talk to some of Spotify's servers securely, all HTTPS traffic runs through a bundled Mbed TLS with full certificate checks.
+Consulte o [roteiro de verificação de playlists](docs/playlist-verification.md) para os testes em aparelho: paginação, filas com muitas faixas, biblioteca, falhas de escrita na conta e funcionamento offline.
 
-The widget is a small plugin inside SpringBoard that reads what's currently playing from the system and sends the same commands as the lock screen.
+## Funcionamento
 
-## Credits
+O JaskoSpotify autentica em um ponto de acesso do Spotify de forma semelhante aos clientes oficiais e mantém a conexão aberta para obter metadados e as chaves necessárias à reprodução. A biblioteca usa os mesmos serviços internos dos apps oficiais; somente a busca usa a Web API pública e a chave de desenvolvedor do usuário.
 
-JaskoSpotify began as a fork of **[riff](https://github.com/SecondTrack/riff) by Second Track**, which made Spotify playback on iOS 6 possible in the first place: the protocol work, the audio pipeline and the first version of the app. Thank you!
+As faixas são recebidas criptografadas da CDN do Spotify, descriptografadas no aparelho e decodificadas por software a partir de Ogg Vorbis. A qualidade depende das opções de streaming e download selecionadas. Como o iOS 5 e 6 não conseguem negociar conexões seguras com alguns serviços atuais, o app inclui Mbed TLS com verificação de certificados para o tráfego HTTPS.
 
-Also used:
-- [stb_vorbis](https://github.com/nothings/stb) by Sean Barrett: Ogg Vorbis decoding (public domain / MIT)
-- [Mbed TLS](https://github.com/Mbed-TLS/mbedtls): TLS (Apache 2.0)
-- The Shannon cipher, ported from rust-shannon in [librespot](https://github.com/librespot-org/librespot) (MIT)
-- [Material Icons](https://github.com/google/material-design-icons) "music_note" in the app icon (Apache 2.0)
+O widget é um plugin pequeno do SpringBoard: lê a reprodução atual do sistema e envia comandos de controle equivalentes aos da tela bloqueada.
 
-Details are in [NOTICE](NOTICE).
+## Créditos
 
-## License
+O JaskoSpotify é baseado no **[Spotify6](https://github.com/iKiWY/Spotify6)**, que construiu um cliente nativo para iOS 5 e 6 a partir do **[riff](https://github.com/SecondTrack/riff), de Second Track**. O riff tornou possível a reprodução do Spotify no iOS 6 e forneceu o trabalho de protocolo e o pipeline de áudio inicial. Nosso agradecimento aos autores e colaboradores do Spotify6 e do riff por essa fundação.
 
-GNU General Public License v3.0, see [LICENSE](LICENSE).
+- [stb_vorbis](https://github.com/nothings/stb), de Sean Barrett: decodificação Ogg Vorbis (domínio público / MIT).
+- [Mbed TLS](https://github.com/Mbed-TLS/mbedtls): TLS (Apache 2.0).
+- Cifra Shannon, portada do rust-shannon no [librespot](https://github.com/librespot-org/librespot) (MIT).
+- A abordagem para o equalizador de áudio foi inspirada no [StreamingKit](https://github.com/tumtumtum/StreamingKit), de Thong Nguyen.
+- [Material Icons](https://github.com/google/material-design-icons), ícone `music_note` (Apache 2.0).
 
-Spotify is a trademark of Spotify AB. iPhone and iOS are trademarks of Apple Inc. JaskoSpotify is not affiliated with or endorsed by Spotify or Apple.
+Mais detalhes em [NOTICE](NOTICE).
+
+## Licença
+
+GNU GPL v3.0. Consulte [LICENSE](LICENSE).
+
+Spotify é uma marca registrada da Spotify AB. iPhone e iOS são marcas da Apple Inc. JaskoSpotify não é afiliado, patrocinado ou endossado pelo Spotify ou pela Apple.
